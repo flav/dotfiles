@@ -1,0 +1,8 @@
+# Set computer name (as done via System Preferences → Sharing)
+scutil --set ComputerName "hex46"
+scutil --set HostName "hex46"
+scutil --set LocalHostName "hex46"
+
+# key repeat
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 40

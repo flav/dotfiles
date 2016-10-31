@@ -1,0 +1,30 @@
+[user]
+  name = Flavio daCosta
+  email = flav@binaryservice.com
+[github]
+  user = flav
+[color]
+  ui = auto
+[alias]
+  s = status -s
+  lp = log --pretty=format:'%h: %ci: %cn: %s' --graph
+  lg = "!source ~/.githelpers && pretty_git_log"
+  sta-pop-dirty = !git stash show -p | git apply && git stash drop
+  brcln = !git branch --merged master | grep -v "\\*" | xargs -n 1 git branch -d
+  recent = ! git reflog | grep 'checkout: moving from' | head -n 50 | egrep -oh ' \\S+$' | awk '!x[$0]++'
+[core]
+  excludesfile = ~/.gitexcludes
+[credential]
+  helper = osxkeychain
+[push]
+  default = simple
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
