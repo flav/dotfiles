@@ -58,6 +58,8 @@ HISTCONTROL=ignoredups:ignorespace
 # preserve history across multiple sessions (append after each command)
 export PROMPT_COMMAND='history -a'
 
+export PATH=~/bin:$PATH
+
 test -f ~/bin/git-completion.bash && . $_
 
 # Usage: releaseTickets release-1497 release-1498
