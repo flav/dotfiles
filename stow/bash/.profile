@@ -81,7 +81,11 @@ alias cgd='cd $(gd=$(git rev-parse --git-dir); echo ${gd%.git*}./)'
 alias cb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 ## Nutshell nub
-eval "$(/Users/flav/source/nutshell.com/projects/nub/bin/nub init -)"
+NUBHOME=/Users/flav/source/nutshell.com/projects
+if [[ -d "$NUBHOME/nub" ]]; then
+   eval "$($NUBHOME/nub/bin/nub init -)"
+fi
+
 export VAGRANT_MOUNT_ALL_WWW=1
 
 alias pair='echo "Committing as: `git config user.name` <`git config user.email`>"'
