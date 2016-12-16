@@ -100,4 +100,4 @@ alias pairkh="git config user.pair 'FDC+KH' && git config user.name 'Flavio daCo
 
 alias clean-url="sed -e 's/%5B/[/g' -e 's/%5D/]/g' -e 's/%2C/,/g'"
 alias boom="pbpaste | json_pp | pbcopy"
-alias aws-nut-ec2="aws ec2 describe-instances --filters "Name=instance-state-name,Values=running" --query 'Reservations[*].Instances[*].[Tags[?Key==\`Name\`] | [0].Value,InstanceId,Placement.AvailabilityZone,InstanceType,PrivateIpAddress]' --output table"
+alias aws-nut-ec2="aws ec2 describe-instances --filters "Name=instance-state-name,Values=running" --query 'Reservations[*].Instances[*].[Tags[?Key==\`Name\`] | [0].Value,InstanceId,InstanceType,PrivateIpAddress,PublicIpAddress] | [] | [*].{Value:[0],InstanceId:[1],InstanceType:[2],PrivateIpAddress:[3],PublicIpAddress:[4]} | sort_by(@, &Value)[*].[Value,InstanceId,InstanceType,PrivateIpAddress,PublicIpAddress]' --output table"
