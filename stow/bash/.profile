@@ -90,6 +90,8 @@ fi
 
 export VAGRANT_MOUNT_ALL_WWW=1
 
+alias weather="curl -s http://wttr.in/arb |head -n 17 |tail -n 10"
+
 alias pair='echo "Committing as: `git config user.name` <`git config user.email`>"'
 alias unpair="git config --remove-section user 2> /dev/null; echo Unpaired.; pair"
 alias pairml="git config user.pair 'FDC+ML' && git config user.name 'Flavio daCosta and Mike Linington' && git config user.email 'developers+fdacosta+mlinington@nutshell.com'; pair"
