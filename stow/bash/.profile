@@ -5,6 +5,9 @@ case ${TERM} in
         screen)
                 PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\033\\"'
                 ;;
+        *)
+                PROMPT_COMMAND=''
+                ;;
 esac
 
 # man console_codes
@@ -57,7 +60,7 @@ PS1="⌁ $RED$ROOT\u$NOR@$GRN\H$NOR:\w\$(parse_git_branch)\$(__git_pair_prompt)\
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=10000
 # preserve history across multiple sessions (append after each command)
-export PROMPT_COMMAND='history -a'
+export PROMPT_COMMAND="$PROMPT_COMMAND; history -a"
 
 export PATH=~/bin:$PATH
 
