@@ -1,0 +1,6 @@
+# spaces
+# When switching to an application, switch to a Space with open windows for the application
+defaults write NSGlobalDomain AppleSpacesSwitchOnActivate -bool false
+
+# Automatically rearrange Spaces based on most recently used
+defaults write com.apple.dock mru-spaces -bool false

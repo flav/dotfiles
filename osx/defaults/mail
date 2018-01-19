@@ -1,0 +1,3 @@
+
+# Don't show images in email
+defaults write com.apple.mail-shared DisableURLLoading -bool true
