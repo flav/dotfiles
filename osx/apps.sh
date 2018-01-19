@@ -19,6 +19,7 @@ apps=(
   firefox
   gifs
   google-chrome
+  google-photos-backup-and-sync
   hammerspoon
   iterm2
   imagealpha
