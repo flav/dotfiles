@@ -40,10 +40,7 @@ apps=(
 )
 
 echo "installing cask..."
-brew install caskroom/cask/brew-cask
-
-echo "installing alternate cask version"
-brew tap caskroom/versions
+brew tap caskroom/cask
 
 echo "installing apps..."
 brew cask install ${apps[@]}
