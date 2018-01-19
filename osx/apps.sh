@@ -19,13 +19,16 @@ apps=(
   firefox
   gifs
   google-chrome
+  hammerspoon
   iterm2
   imagealpha
   java
   keyboard-cleaner
+  krita
   licecap
   macdown
   nvalt
+  omnidisksweeper
   rowanj-gitx
   sequel-pro
   skype
