@@ -14,9 +14,6 @@ sh $DIR/install-homebrew.sh
 # Update homebrew
 brew update
 
-# Custom taps
-brew tap homebrew/binary
-
 # Install other useful binaries
 binaries=(
   ack
