@@ -12,10 +12,11 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 sh $DIR/install-homebrew.sh
 
 apps=(
-  ansible
+  1password
+  dash
   docker
+  dropbox
   firefox
-  genymotion
   gifs
   google-chrome
   iterm2
@@ -25,9 +26,7 @@ apps=(
   licecap
   macdown
   nvalt
-  packer
   rowanj-gitx
-  quicksilver
   sequel-pro
   skype
   slack

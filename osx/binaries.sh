@@ -18,11 +18,13 @@ brew update
 binaries=(
   ack
   ag
+  ansible
   awscli
   ffmpeg
   git
   git-extras
   node
+  packer
   tmux
   tree
   vim
