@@ -55,6 +55,7 @@ COL="\[\e[1;34m\]"
 PS1="⌁ $RED$ROOT\u$NOR@$GRN\H$NOR:\w\$(parse_git_branch)\$(__git_pair_prompt)\n${COL}❯$NOR "
 
 HISTCONTROL=ignoredups:ignorespace
+HISTSIZE=10000
 # preserve history across multiple sessions (append after each command)
 export PROMPT_COMMAND='history -a'
 
@@ -77,10 +78,19 @@ openReleaseTickets() {
     releaseTickets $1 $2 | xargs open
 }
 
+removeAwsHostKey () {
+       ssh-keygen -R $1 -f /Users/flav/.ssh/aws_hosts
+}
+
+loopGif() {
+       echo convert -loop 0 $1
+}
+
 alias ls="ls -GF"
 alias grep="grep --color=auto"
 alias cgd='cd $(gd=$(git rev-parse --git-dir); echo ${gd%.git*}./)'
 alias cb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias fixcam="sudo killall VDCAssistant"
 
 ## Nutshell nub
 NUBHOME=/Users/flav/source/nutshell.com/projects

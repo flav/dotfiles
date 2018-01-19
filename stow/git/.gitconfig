@@ -12,6 +12,8 @@
   sta-pop-dirty = !git stash show -p | git apply && git stash drop
   brcln = !git branch --merged master | grep -v "\\*" | xargs -n 1 git branch -d
   recent = ! git reflog | grep 'checkout: moving from' | head -n 50 | egrep -oh ' \\S+$' | awk '!x[$0]++'
+  bdiff = diff origin/master...
+  showtags = for-each-ref --sort=taggerdate --format '%(refname) %(taggerdate)' refs/tag
 [core]
   excludesfile = ~/.gitexcludes
 [credential]
