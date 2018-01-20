@@ -1,0 +1,13 @@
+Notes/TODO
+
+
+
+`~/Library/Messages`
+Can't be a simlink, won't save attachments.
+
+
+link `/etc/cups` to my local copy (and kill `cupsd`)
+
+
+Login background `/Library/Caches/com.apple.desktop.admin.png`
+
