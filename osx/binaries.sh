@@ -20,6 +20,7 @@ binaries=(
   ag
   ansible
   awscli
+  colordiff
   ffmpeg
   git
   git-extras
