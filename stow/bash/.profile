@@ -6,7 +6,7 @@ case ${TERM} in
                 PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\033\\"'
                 ;;
         *)
-                PROMPT_COMMAND=''
+                PROMPT_COMMAND='true'
                 ;;
 esac
 
