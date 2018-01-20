@@ -1,0 +1,2 @@
+# Fri Jan 19 9:57
+defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  h:mm a"
