@@ -18,3 +18,6 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string Dark
 
 
 defaults write com.apple.finder ShowPathbar -bool true
+
+# In windows and dialogs: Tab moves focus between: 2 = all controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
