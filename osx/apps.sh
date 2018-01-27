@@ -21,8 +21,8 @@ apps=(
   google-chrome
   google-photos-backup-and-sync
   hammerspoon
-  iterm2
   imagealpha
+  iterm2
   java
   keyboard-cleaner
   krita
