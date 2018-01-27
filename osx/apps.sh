@@ -32,6 +32,7 @@ apps=(
   omnidisksweeper
   rowanj-gitx
   sequel-pro
+  skitch
   skype
   slack
   spotify
