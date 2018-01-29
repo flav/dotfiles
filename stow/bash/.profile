@@ -101,6 +101,13 @@ if [[ -d "$NUBHOME/nub" ]]; then
    eval "$($NUBHOME/nub/bin/nub init -)"
 fi
 
+# misc specific env files to include
+if [ -d ~/vault/env ]; then
+  for e in ~/vault/env/*; do
+    source $e;
+  done
+fi
+
 export VAGRANT_MOUNT_ALL_WWW=1
 
 alias weather="curl -s http://wttr.in/arb |head -n 17 |tail -n 10"
