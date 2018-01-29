@@ -115,10 +115,6 @@ alias weather="curl -s http://wttr.in/arb |head -n 17 |tail -n 10"
 alias pair='echo "Committing as: `git config user.name` <`git config user.email`>"'
 alias unpair="git config --remove-section user 2> /dev/null; echo Unpaired.; pair"
 alias pairml="git config user.pair 'FDC+ML' && git config user.name 'Flavio daCosta and Mike Linington' && git config user.email 'developers+fdacosta+mlinington@nutshell.com'; pair"
-alias paircs="git config user.pair 'FDC+CS' && git config user.name 'Flavio daCosta and Chris Sprague' && git config user.email 'developers+fdacosta+csprague@nutshell.com'; pair"
-alias pairds="git config user.pair 'FDC+DS' && git config user.name 'Flavio daCosta and Dan Seely' && git config user.email 'developers+fdacosta+dseely@nutshell.com'; pair"
-alias pairsr="git config user.pair 'FDC+SR' && git config user.name 'Flavio daCosta and Seth Rachwitz' && git config user.email 'developers+fdacosta+srachwitz@nutshell.com'; pair"
-alias pairkh="git config user.pair 'FDC+KH' && git config user.name 'Flavio daCosta and Kyle Hendricks' && git config user.email 'developers+fdacosta+khendricks@nutshell.com'; pair"
 
 alias clean-url="sed -e 's/%5B/[/g' -e 's/%5D/]/g' -e 's/%2C/,/g'"
 alias boom="pbpaste | json_pp | pbcopy"
