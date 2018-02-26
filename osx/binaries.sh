@@ -24,6 +24,7 @@ binaries=(
   ffmpeg
   git
   git-extras
+  ipcalc
   node
   packer
   tmux

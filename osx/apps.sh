@@ -36,6 +36,7 @@ apps=(
   skype
   slack
   spotify
+  soundcleod
   sublime-text
   vagrant
   virtualbox
