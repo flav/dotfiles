@@ -25,12 +25,20 @@ binaries=(
   git
   git-extras
   ipcalc
+  jq
+  mkcert
+  multitail
   node
+  nss
   packer
+  stow
+  telnet
   tmux
   tree
   vim
+  watch
   wget
+  yarn
 )
 
 # Install the binaries
