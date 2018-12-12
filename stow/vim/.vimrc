@@ -149,3 +149,7 @@ au BufRead,BufNewFile *.vala            setfiletype vala
 au BufRead,BufNewFile *.vapi            setfiletype vala
 au! Syntax vala source $VIM/vim71/syntax/cs.vim
 
+
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
