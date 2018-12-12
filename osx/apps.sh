@@ -12,9 +12,9 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 sh $DIR/install-homebrew.sh
 
 apps=(
-  1password
-  dash
-  docker
+  # 1password
+  # dash
+  # docker
   dropbox
   firefox
   gifs
