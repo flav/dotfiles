@@ -7,6 +7,7 @@ set -e
 
 mkdir ~/bin 2>/dev/null || true
 
+stow --target=$HOME ag
 stow --target=$HOME bash
 stow --target=$HOME git
 stow --target=$HOME screen
