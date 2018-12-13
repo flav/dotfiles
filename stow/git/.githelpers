@@ -14,7 +14,7 @@ FORMAT="$HASH $AUTHOR -$REFS $SUBJECT $RELATIVE_COMMIT_TIME"
 # Alias usage: git lg [<options>] [<since>..<until>] [[--] <path>...]
 #
 function pretty_git_log() {
-    git log --graph --pretty="tformat:$FORMAT" $* |
+    git log --graph --color --pretty="tformat:$FORMAT" $* |
     # Pipe to less, allowing for an insertion point
     # in piping through additional formating (e.g., `column`).
     #
