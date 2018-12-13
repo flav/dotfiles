@@ -89,6 +89,10 @@ loopGif() {
        echo convert -loop 0 $1
 }
 
+connectDocker() {
+	screen ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty
+}
+
 alias ls="ls -GF"
 alias grep="grep --color=auto"
 alias cgd='cd $(gd=$(git rev-parse --git-dir); echo ${gd%.git*}./)'
