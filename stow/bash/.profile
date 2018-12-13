@@ -64,6 +64,8 @@ export PROMPT_COMMAND="$PROMPT_COMMAND; history -a"
 
 export PATH=~/bin:$PATH
 
+export EDITOR=vim
+
 test -f ~/bin/git-completion.bash && . $_
 
 # Usage: releaseTickets release-1497 release-1498
