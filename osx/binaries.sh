@@ -51,6 +51,10 @@ brew install kubectx --with-short-names
 brew tap theseal/ssh-askpass
 brew install ssh-askpass
 
+# https://github.com/jesseduffield/lazydocker
+brew tap jesseduffield/lazydocker
+brew install lazydocker
+
 # Remove outdated versions from the cellar
 brew cleanup
 
