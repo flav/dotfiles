@@ -153,3 +153,8 @@ au! Syntax vala source $VIM/vim71/syntax/cs.vim
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
+
+" Atomicity issue when editing a file which is also mounted in a docker
+" container. Vim will change the inode of the file when editing, then
+" the change will not show up in the container. This fixes it.
+set backupcopy=yes
