@@ -26,6 +26,7 @@ binaries=(
   git-extras
   ipcalc
   jq
+  kube-ps1
   mkcert
   multitail
   node
@@ -43,6 +44,9 @@ binaries=(
 
 # Install the binaries
 brew install ${binaries[@]}
+
+# https://github.com/ahmetb/kubectx
+brew install kubectx --with-short-names
 
 brew tap theseal/ssh-askpass
 brew install ssh-askpass

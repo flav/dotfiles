@@ -53,9 +53,22 @@ function __git_pair_prompt {
   [ `git config user.pair` ] && echo " (pair: `git config user.pair`)"
 }
 
+# https://github.com/ahmetb/kubectx
+# https://github.com/jonmosco/kube-ps1
+if [ -f "/usr/local/opt/kube-ps1/share/kube-ps1.sh" ]; then
+  source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+  kubeoff
+fi
+
+function _kube {
+  if [ "`type -t kube_ps1`" == "function" ]; then
+    kube_ps1
+  fi
+}
+
 COL="\[\e[1;34m\]"
 #PS1="[$RED$ROOT\u$NOR@$GRN\H$NOR \W\$(parse_git_branch)]\\$ "
-PS1="⌁ $RED$ROOT\u$NOR@$GRN\H$NOR:\w\$(parse_git_branch)\$(__git_pair_prompt)\n${COL}❯$NOR "
+PS1="⌁ $RED$ROOT\u$NOR@$GRN\H$NOR:\w\$(parse_git_branch)\$(__git_pair_prompt)\$(_kube)\n${COL}❯$NOR "
 
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=10000
