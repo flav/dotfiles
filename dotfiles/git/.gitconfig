@@ -15,6 +15,7 @@
   recent = ! git reflog | grep 'checkout: moving from' | head -n 50 | egrep -oh ' \\S+$' | awk '!x[$0]++'
   bdiff = diff origin/master...
   showtags = for-each-ref --sort=taggerdate --format '%(refname) %(taggerdate)' refs/tag
+  mstage = merge --no-ff --log --no-edit
 [core]
   excludesfile = ~/.gitexcludes
 [credential]
