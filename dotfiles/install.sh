@@ -31,6 +31,8 @@ function makeLinks {
 
 mkdir ~/bin 2>/dev/null || true
 
+touch ~/.gitexcludes
+
 makeLinks $HOME ag
 makeLinks $HOME bash
 makeLinks $HOME git
