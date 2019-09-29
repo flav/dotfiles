@@ -12,31 +12,32 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 sh $DIR/install-homebrew.sh
 
 apps=(
-  # 1password
+  1password
   # dash
   # docker
-  dropbox
+  # dropbox
   firefox
   gifs
   google-chrome
-  google-photos-backup-and-sync
+  # google-photos-backup-and-sync
   hammerspoon
   imagealpha
-  iterm2
-  java
+  # iterm2
+  # java
+  keybase
   keyboard-cleaner
-  krita
+  # krita
   licecap
-  macdown
+  # macdown
   nvalt
   omnidisksweeper
   rowanj-gitx
   sequel-pro
   skitch
-  skype
+  # skype
   slack
+  # soundcleod
   spotify
-  soundcleod
   sublime-text
   vagrant
   virtualbox
