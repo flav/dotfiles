@@ -60,6 +60,9 @@ if [ -f "/usr/local/opt/kube-ps1/share/kube-ps1.sh" ]; then
   kubeoff
 fi
 
+alias kctx=kubectx
+alias kns=kubens
+
 function _kube {
   if [ "`type -t kube_ps1`" == "function" ]; then
     kube_ps1
