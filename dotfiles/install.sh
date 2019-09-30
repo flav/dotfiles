@@ -25,7 +25,7 @@ function makeLinks {
             mv $TARGET $BACKUPFILE
         fi
 
-        ln -s $SOURCE $TARGET
+        ln -s ${SOURCE#$DEST/} $TARGET
     done
 }
 
