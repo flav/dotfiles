@@ -20,8 +20,10 @@ binaries=(
   ag
   ansible
   awscli
+  bat
   colordiff
   ffmpeg
+  fzf
   git
   git-extras
   ipcalc
