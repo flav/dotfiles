@@ -12,6 +12,7 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 sh $DIR/install-homebrew.sh
 
 fonts=(
+  font-hack
   font-kreon
   font-lato
   font-league-gothic
