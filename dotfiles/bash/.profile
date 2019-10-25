@@ -95,7 +95,6 @@ fi
 alias ls="ls -GF"
 alias grep="grep --color=auto"
 alias cgd='cd $(gd=$(git rev-parse --git-dir); echo ${gd%.git*}./)'
-alias cb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias fixcam="sudo killall VDCAssistant"
 
 alias weather="curl -s http://wttr.in/arb |head -n 17 |tail -n 10"
