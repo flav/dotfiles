@@ -82,7 +82,7 @@ loopGif() {
 }
 
 connectDocker() {
-  screen ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty
+  screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty 
 }
 
 # misc specific env files to include
