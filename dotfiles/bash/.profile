@@ -85,6 +85,10 @@ connectDocker() {
   screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty 
 }
 
+secureInput() {
+  ioreg -l -w 0 | grep SecureInput
+}
+
 # misc specific env files to include
 if [ -d ~/vault/env ]; then
   for e in ~/vault/env/*; do
