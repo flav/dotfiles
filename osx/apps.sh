@@ -16,6 +16,7 @@ apps=(
   # dash
   # docker
   # dropbox
+  dozer
   firefox
   gifs
   google-chrome
