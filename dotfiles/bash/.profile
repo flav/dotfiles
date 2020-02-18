@@ -89,6 +89,12 @@ secureInput() {
   ioreg -l -w 0 | grep SecureInput
 }
 
+refresh() {
+  if [ -n "$TMUX" ]; then
+      export $(tmux show-environment | grep "^SSH_AUTH_SOCK")
+  fi
+}
+
 # misc specific env files to include
 if [ -d ~/vault/env ]; then
   for e in ~/vault/env/*; do
