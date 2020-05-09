@@ -43,6 +43,7 @@ binaries=(
   watch
   wget
   yarn
+  shellcheck
 )
 
 # Install the binaries

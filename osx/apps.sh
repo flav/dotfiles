@@ -13,6 +13,7 @@ sh $DIR/install-homebrew.sh
 
 apps=(
   1password
+  bitbar
   # dash
   # docker
   # dropbox
@@ -47,7 +48,7 @@ apps=(
 )
 
 echo "installing cask..."
-brew tap caskroom/cask
+# brew tap homebrew/cask-cask
 
 echo "installing apps..."
 brew cask install ${apps[@]}

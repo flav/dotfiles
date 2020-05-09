@@ -38,7 +38,8 @@ brew tap phinze/homebrew-cask
 
 # Tap the fonts
 echo "installing caskroom/fonts"
-brew tap caskroom/fonts
+#brew tap caskroom/cask-fonts
+brew tap homebrew/cask-fonts
 
 # install fonts
 echo "installing fonts..."

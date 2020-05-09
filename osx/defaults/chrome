@@ -1,0 +1,4 @@
+
+# prompt to show "Always open these types of links in the associated app"
+# https://support.google.com/chrome/thread/14193532?hl=en
+defaults write com.google.Chrome ExternalProtocolDialogShowAlwaysOpenCheckbox -bool true
