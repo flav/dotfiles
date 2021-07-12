@@ -12,7 +12,7 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 sh $DIR/install-homebrew.sh
 
 apps=(
-  1password
+  # 1password
   bitbar
   # dash
   # docker
@@ -31,10 +31,11 @@ apps=(
   # krita
   licecap
   # macdown
+  monitorcontrol
   nvalt
   omnidisksweeper
   rowanj-gitx
-  sequel-pro
+  #sequel-pro
   skitch
   # skype
   slack

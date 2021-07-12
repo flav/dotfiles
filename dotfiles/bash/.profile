@@ -82,7 +82,8 @@ loopGif() {
 }
 
 connectDocker() {
-  screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty 
+  docker run -it --rm --privileged --pid=host justincormack/nsenter1
+  # screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty 
 }
 
 secureInput() {
@@ -90,17 +91,22 @@ secureInput() {
 }
 
 refresh() {
+  loadVault
   if [ -n "$TMUX" ]; then
       export $(tmux show-environment | grep "^SSH_AUTH_SOCK")
   fi
 }
 
-# misc specific env files to include
-if [ -d ~/vault/env ]; then
-  for e in ~/vault/env/*; do
-    source $e;
-  done
-fi
+loadVault() {
+  # misc specific env files to include
+  if [ -d ~/vault/env ]; then
+    for e in ~/vault/env/*; do
+      source $e;
+    done
+  fi
+}
+
+loadVault
 
 alias ls="ls -GF"
 alias grep="grep --color=auto"

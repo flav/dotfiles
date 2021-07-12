@@ -31,10 +31,13 @@ binaries=(
   kube-ps1
   kubectx
   mkcert
+  mtr
   multitail
   node
   nss
   packer
+  shellcheck
+  spark
   stow
   telnet
   tmux
@@ -43,7 +46,7 @@ binaries=(
   watch
   wget
   yarn
-  shellcheck
+  youtube-dl
 )
 
 # Install the binaries
