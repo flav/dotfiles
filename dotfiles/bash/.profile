@@ -114,7 +114,7 @@ alias cgd='cd $(gd=$(git rev-parse --git-dir); echo ${gd%.git*}./)'
 alias fixcam="sudo killall VDCAssistant"
 
 alias weather="curl -s http://wttr.in/arb |head -n 17 |tail -n 10"
-alias ag='ag --path-to-ignore ~/.ignore'
+alias ag='ag -W 256 --path-to-ignore ~/.ignore'
 
 alias clean-url="sed -e 's/%5B/[/g' -e 's/%5D/]/g' -e 's/%2C/,/g'"
 alias boom="pbpaste | json_pp | pbcopy"
