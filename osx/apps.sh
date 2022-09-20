@@ -19,7 +19,7 @@ apps=(
   # dropbox
   dozer
   firefox
-  gifs
+  # gifs - removed from brew https://github.com/manmal/GIFs
   google-chrome
   # google-photos-backup-and-sync
   hammerspoon
@@ -53,6 +53,11 @@ echo "installing cask..."
 
 echo "installing apps..."
 brew cask install ${apps[@]}
+
+brew tap federico-terzi/espanso
+brew install espanso
+
+# brew install --cask keycastr
 
 brew cleanup
 

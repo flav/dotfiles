@@ -41,6 +41,7 @@ binaries=(
   stow
   telnet
   tmux
+  tmuxp
   tree
   vim
   watch
