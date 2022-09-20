@@ -59,6 +59,9 @@ brew install ssh-askpass
 brew tap jesseduffield/lazydocker
 brew install lazydocker
 
+# https://github.com/noahgorstein/jqp
+brew install noahgorstein/tap/jqp
+
 # Remove outdated versions from the cellar
 brew cleanup
 
