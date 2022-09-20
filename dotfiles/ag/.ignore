@@ -1,14 +1,10 @@
-
-
-fub_api/resources/tmp
-fub_csd/resources/tmp
-fub_mobile/resources/tmp
-richdesk/resources/tmp
-richdesk/webroot/js
-
 icons/
 __fixtures__/
 coverage/
 coverage/lcov.info
 coverage/coverage-final.json
 lcov-report/
+
+build/demodata/
+# fixtures/
+# tests/
