@@ -138,7 +138,7 @@ alias ag='ag -W 256 --path-to-ignore ~/.ignore'
 
 alias clean-url="sed -e 's/%5B/[/g' -e 's/%5D/]/g' -e 's/%2C/,/g'"
 alias boom="pbpaste | json_pp | pbcopy"
-. "$HOME/.cargo/env"
+[ -s "$HOME/.cargo/env" ] && \. "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
