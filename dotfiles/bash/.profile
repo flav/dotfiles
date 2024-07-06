@@ -81,9 +81,29 @@ loopGif() {
   echo convert -loop 0 $1
 }
 
+makeMaze() {
+	COLS=${1:-20};
+	ROWS=${2:-10};
+	i=0;
+	# w=(╱ ╲);while :;do echo -n ${w[RANDOM%2]};done
+	w=(╱ ╲);
+	while [ $i -lt "$ROWS" ];
+	do
+		# echo -n $i " - "; #row
+		j=0;
+		while [ $j -lt "$COLS" ]; do
+			echo -n ${w[RANDOM%2]}
+			((j++));
+		done;
+
+		((i++));
+		echo ;
+	done
+}
+
 connectDocker() {
   docker run -it --rm --privileged --pid=host justincormack/nsenter1
-  # screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty 
+  # screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty
 }
 
 secureInput() {
@@ -113,8 +133,13 @@ alias grep="grep --color=auto"
 alias cgd='cd $(gd=$(git rev-parse --git-dir); echo ${gd%.git*}./)'
 alias fixcam="sudo killall VDCAssistant"
 
-alias weather="curl -s http://wttr.in/arb |head -n 17 |tail -n 10"
+alias weather="curl -s http://wttr.in/ann+arbor |head -n 17 |tail -n 10"
 alias ag='ag -W 256 --path-to-ignore ~/.ignore'
 
 alias clean-url="sed -e 's/%5B/[/g' -e 's/%5D/]/g' -e 's/%2C/,/g'"
 alias boom="pbpaste | json_pp | pbcopy"
+. "$HOME/.cargo/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

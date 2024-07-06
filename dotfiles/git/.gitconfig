@@ -12,13 +12,14 @@
   lg = log --graph --abbrev-commit --decorate --format=format:'%C(red)%h%C(reset) %C(cyan)%an%C(reset) -%C(yellow)%d%C(reset) %s %C(green)%cr%C(reset)'
   lgo = "!source ~/.githelpers && pretty_git_log"
   sta-pop-dirty = !git stash show -p | git apply && git stash drop
-  brcln = !git branch --merged master | grep -v "\\*" | xargs -n 1 git branch -d
+  brcln = !git branch --merged main | grep -v "\\*" | xargs -n 1 git branch -d
   recent = ! git reflog | grep 'checkout: moving from' | head -n 50 | egrep -oh ' \\S+$' | awk '!x[$0]++'
-  bdiff = diff origin/master...
+  bdiff = diff origin/main...
   showtags = for-each-ref --sort=taggerdate --format '%(refname) %(taggerdate)' refs/tag
   mstage = merge --no-ff --log --no-edit
 [core]
-  excludesfile = ~/.gitexcludes
+  excludesfile = /Users/flav/.gitexcludes
+  editor = code --wait
 [credential]
   helper = osxkeychain
 [push]
@@ -27,3 +28,15 @@
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+# [transcrypt]
+#	openssl-path = /opt/homebrew/opt/openssl@1.1/bin/openssl

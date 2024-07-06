@@ -154,6 +154,17 @@ au! Syntax vala source $VIM/vim71/syntax/cs.vim
 set textwidth=80
 set colorcolumn=+1
 
+autocmd Filetype gitcommit set colorcolumn=50
+autocmd Filetype gitcommit set textwidth=72
+
+"@REM set cursorline
+"@REM set cursorcolumn
+"augroup CursorLine
+"  au!
+"  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn
+"  au WinLeave * setlocal nocursorline nocursorcolumn
+"augroup END
+"
 " Atomicity issue when editing a file which is also mounted in a docker
 " container. Vim will change the inode of the file when editing, then
 " the change will not show up in the container. This fixes it.
