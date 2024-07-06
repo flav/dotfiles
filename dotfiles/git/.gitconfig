@@ -22,6 +22,8 @@
   editor = code --wait
 [credential]
   helper = osxkeychain
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [push]
   default = simple
 [filter "lfs"]
@@ -40,3 +42,5 @@
 	helper = !/opt/homebrew/bin/gh auth git-credential
 # [transcrypt]
 #	openssl-path = /opt/homebrew/opt/openssl@1.1/bin/openssl
+[credential "https://dev.azure.com"]
+	useHttpPath = true
